@@ -10,6 +10,9 @@
     flex-wrap: wrap;
     padding-block: 10px;
     background-color: #EFF1F3;
+    position:sticky;
+    z-index:15;
+    top:0;
 }
 
 .header>div>img {
@@ -73,8 +76,13 @@
     padding-block: 5px;
     display: flex;
     align-items: center;
-    box-shadow: 0 0 10px 1px rgba(25, 25, 25, .25);
+    box-shadow: 0 0 10px 2px rgba(50, 50, 50, .3);
     letter-spacing: 1px;
+    background-color: white;
+    position:-webkit-sticky;
+    position:sticky;
+    top:70px;
+    z-index:15;
 }
 
 .cat {
@@ -107,6 +115,7 @@
     overflow-x: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
+    overflow-y: hidden;
 }
 
 .slide>button {
@@ -194,6 +203,10 @@
     cursor: pointer;
     display: flex;
     flex-direction: column;
+}
+.item>img{
+    object-fit:contain;
+    height:250px;
 }
 .item:hover{
     box-shadow:0 0 15px 1px rgba(50,50,50,.25);
