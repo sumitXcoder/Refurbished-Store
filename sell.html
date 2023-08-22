@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell:</title>
+    <script src="https://kit.fontawesome.com/475bb4c8a1.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        header {
+            background-color: #F7F8F9;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            
+        }
+
+        .head {
+            padding: 12px;
+            display: flex;
+            align-items: center;
+        }
+        .content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            height: 80vh;
+        }
+        .container{
+            border: 0.5px solid rgb(103, 96, 96);
+            width: 50%;
+            height: 100%;
+            display: flex;
+            margin-top: 10px;
+            flex-direction: column;
+            float: left;
+        }
+        .hero{
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .title{
+            padding: 25px 20px;
+            float: left;
+
+        }
+        .list{
+            border: 0  solid rgb(103, 96, 96);
+            width: 50%;
+            /* padding: 10px; */
+            display: flex;
+            flex-direction: column;
+            
+
+        }
+        li{
+            list-style: none;
+        }
+        .list>li{
+            list-style: none;
+            border: 0.1px  solid rgb(103, 96, 96) ;
+            height: 50px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            opacity: 0.6;
+            position: relative;
+            cursor: pointer;
+        }
+        .list>li:hover{
+            background-color: rgb(139, 131, 131);
+            color: white;
+            opacity: 0.8;
+        }
+        .details{
+            position: absolute;
+            left: 0;
+            display: flex;
+            padding: 0 20px ;
+            gap: 20px;
+        }
+        .open{
+            position: absolute;
+            right: 0;
+            padding: 0 20px ;
+        }
+        
+        .items{
+            display: flex;
+            
+
+        }
+        .view{
+            width: 50%;
+            
+            height: 100%;
+            position: relative;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+        .brief{
+            text-align: center;
+position: absolute;
+height: 100%;
+width: 70%;
+top: 0;background-color: white;
+        }
+        .brief>ul>li>a{
+            text-decoration: none;
+            font-size: 40px;
+            color: rgb(0, 0, 0);
+        }
+        .brief>ul>li:hover{
+            background-color: rgb(139, 131, 131);
+            opacity: 0.8;
+        }
+
+        .b-furniture,.b-fashion,.b-electronics,.b-bikes,.b-jobs,.b-mobiles,.b-ppts,.b-cars{
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+    </header>
+    <div class="content">
+        <div class="hero"><h1>Post your Ad</h1></div>
+        <div class="container">
+            <div class="title"><h3>Choose a Category</h3></div>
+            <div class="items">
+
+                <ul class="list">
+                    <li onclick="car()"><span class="details"><i class="fa-solid fa-car-side"></i>Cars</span><span class="open"><i class="fa-solid fa-chevron-right" ></i></span></li>
+                    <li onclick="ppt()"><span class="details"><i class="fa-regular fa-building"></i>Properties</span><span class="open"><i class="fa-solid fa-chevron-right" ></i></span></li>
+                    <li onclick="mobile()"><span class="details"><i class="fa-solid fa-mobile-screen"></i>Mobiles</span><span class="open"><i class="fa-solid fa-chevron-right" ></i></span></li>
+                    <li onclick="job()"><span class="details"><i class="fa-solid fa-suitcase"></i>Jobs</span><span class="open"><i class="fa-solid fa-chevron-right" ></i></span></li>
+                    <li onclick="bike()"><span class="details"><i class="fa-solid fa-person-biking"></i>Bikes</span><span class="open"><i class="fa-solid fa-chevron-right" ></i></span></li>
+                    <li onclick="elect()"><span class="details"><i class="fa-solid fa-desktop"></i>Electronic</span><span class="open"><i class="fa-solid fa-chevron-right" ></i></span></li>
+                    <li onclick="fash()"><span class="details"><i class="fa-solid fa-shirt"></i>Fashion</span><span class="open"><i class="fa-solid fa-chevron-right" ></i></span></li>
+                    <li onclick="furni()"><span class="details"><i class="fa-solid fa-chair"></i>Furniture</span><span class="open"><i class="fa-solid fa-chevron-right" ></i></span></li>
+    
+                </ul>
+            <div class="view">
+
+                <div class="brief b-cars">
+                    <ul>
+                        <li> <a href="">cars</a> </li>
+                    </ul>
+                </div>  
+                <div class="brief b-ppts">
+                    <ul>
+                        <li> <a href="">Houses</a> </li>
+                        <li> <a href="">Apartments</a> </li>
+                        <li> <a href="">Lands & Plots</a> </li>
+                    </ul>
+                </div>
+                <div class="brief b-mobiles">
+                    <ul>
+                        <li> <a href="">Mobile Phones</a> </li>
+                        <li> <a href="">Accessories </a> </li>
+                        <li> <a href="">Tablets </a> </li>
+                    </ul>
+                </div>
+                <div class="brief b-jobs">
+                    <ul>
+                        <li> <a href="">Driver</a> </li>
+                        <li> <a href="">Clerk</a> </li>
+                        <li> <a href="">Office Assistant</a> </li>
+                        <li> <a href="">Sales & Marketing</a> </li>
+                        <li> <a href="">IT industries</a> </li>
+                    </ul>
+                </div>
+                <div class="brief b-bikes">
+                    <ul>
+                        <li> <a href="">Motors Cycles</a> </li>
+                        <li> <a href="">Scooters</a> </li>
+                        <li> <a href="">Spare Parts</a> </li>
+                        <li> <a href="">Bycycles</a> </li>
+                    </ul>
+                </div>
+                <div class="brief b-electronics">
+                    <ul>
+                        <li> <a href="">Fridges</a> </li>
+                        <li> <a href="">Washing Machines</a> </li>
+                        <li> <a href="">Fans</a> </li>
+                        <li> <a href="">TV</a> </li>
+                        <li> <a href="">Coolers</a> </li>
+                    </ul>
+                </div>
+                <div class="brief b-fashion">
+                    <ul>
+                        <li> <a href="">Men</a> </li>
+                        <li> <a href="">Women</a> </li>
+                        <li> <a href="">Kids</a> </li>
+                    </ul>
+                </div>
+                <div class="brief b-furniture">
+                    <ul>
+                        <li> <a href="">Sofa</a> </li>
+                        <li> <a href="">Dining</a> </li>
+                        <li> <a href="">Wardrobes</a> </li>
+                        <li> <a href="">Chairs</a> </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            
+
+        </div>
+    </div>
+    <script src="sell.js"></script>
+</body>
+
+</html>
+
